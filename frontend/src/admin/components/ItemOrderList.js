@@ -1,8 +1,10 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
-const reqLink = "http://localhost:3001/admin/orders"
+// const req = "http://localhost:3001"
+const req = "https://nebula-lounge-api.vercel.app"
 
 export default function ItemOrderList(props){
+  const reqLink = req+"/admin/orders"
   let [isPay, setIsPay] = useState(false)
   const [listOrder, setListOrder] = useState([])
 
