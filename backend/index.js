@@ -9,7 +9,13 @@ const cors = require('cors')
 const app = express()
 const port = 3001
 
-app.use(cors())
+app.use(cors(
+  {
+    origin : ["https://nebula-lounge-api.vercel.app/"],
+    methods: ["POST", "GET"],
+    credentials: true
+  }
+))
 app.use(cookieParser())
 app.use(express.urlencoded({extended:true}))
 app.use(express.json())
