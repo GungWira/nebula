@@ -5,11 +5,11 @@ import { useCookies } from 'react-cookie'
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react'
 import axios from 'axios';
-const reqLinkAdmin = "http://localhost:3001/admin/"
-
-
+// const req = "http://localhost:3001"
+const req = "https://nebula-lounge-api.vercel.app/"
 
 export default function AdminPage(){
+  const reqLinkAdmin = req+"/admin/"
   const [cookie, setCookie] = useCookies(['loggedAdmin'])
   const navigate = useNavigate()
 

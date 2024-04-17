@@ -8,13 +8,13 @@ import ButtonCart from './components/ButtonCart'
 import Cart from './components/Cart'
 import OrderSuccess from './components/OrderSuccess'
 import axios from 'axios'
-const req = "http://localhost:3001"
 // const req = "http://localhost:3001"
-const reqLink = req+"/client/menu/type"
-const reqLinkSpecial =  req+"/client/menu/special"
-const reqLinkNormalMenu =  req+"/client/menu/detail"
+const req = "https://nebula-lounge-api.vercel.app/"
 
 export default function ClientPage(){
+  const reqLink = req+"/client/menu/type"
+  const reqLinkSpecial =  req+"/client/menu/special"
+  const reqLinkNormalMenu =  req+"/client/menu/detail"
   const [cookies, setCookies] = useCookies(['name'])
   const [loggedIn, setLoggedIn] = useState(false)
   let [items, setItem] = useState(0)

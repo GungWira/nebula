@@ -5,14 +5,16 @@ import { useCookies } from 'react-cookie'
 import { useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react'
 import axios from 'axios';
-const reqLinkAdmin = "http://localhost:3001/admin/"
-const reqLinkMenus = "http://localhost:3001/admin/menus"
-const reqLinkPromo = "http://localhost:3001/admin/menus/promo"
-const reqLinkStatus = "http://localhost:3001/admin/menus/status"
-const reqLinkUpdate = "http://localhost:3001/admin/menus/update"
+// const req = "http://localhost:3001"
+const req = "https://nebula-lounge-api.vercel.app/"
 
 
 export default function MenusPageAdmin(){
+  const reqLinkAdmin = req+"/admin/"
+  const reqLinkMenus = req+"/admin/menus"
+  const reqLinkPromo = req+"/admin/menus/promo"
+  const reqLinkStatus = req+"/admin/menus/status"
+  const reqLinkUpdate = req+"/admin/menus/update"
   const [cookie, setCookie] = useCookies(['loggedAdmin'])
   const [menus, setMenu] = useState([])
   const navigate = useNavigate()

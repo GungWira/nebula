@@ -4,11 +4,12 @@ import { useNavigate } from 'react-router-dom';
 import './assets/style.css'
 import Navbar from './components/Navbar'
 import axios from 'axios'
-const reqLink = "http://localhost:3001/admin/users"
-const reqLinkAdmin = "http://localhost:3001/admin/"
-
+// const req = "http://localhost:3001"
+const req = "https://nebula-lounge-api.vercel.app/"
 
 export default function UsersPageAdmin(){
+  const reqLink = req+"admin/users"
+  const reqLinkAdmin = req+"admin/"
   const [users, setUser] = useState([])
   const [cookie, setCookie] = useCookies(['loggedAdmin'])
   const navigate = useNavigate()

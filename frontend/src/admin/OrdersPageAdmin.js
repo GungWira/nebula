@@ -5,11 +5,12 @@ import './assets/style.css'
 import ItemOrderList from './components/ItemOrderList'
 import Navbar from './components/Navbar'
 import axios from 'axios'
-const reqLink = "http://localhost:3001/admin/orders"
-const reqLinkAdmin = "http://localhost:3001/admin/"
-
+// const req = "http://localhost:3001"
+const req = "https://nebula-lounge-api.vercel.app/"
 
 export default function OrdersPageAdmin(){
+  const reqLink = req+"/admin/orders"
+  const reqLinkAdmin = req+"/admin/"
   const [orders, setOrder] = useState([])
   const [cookie, setCookie] = useCookies(['loggedAdmin'])
   const navigate = useNavigate()
