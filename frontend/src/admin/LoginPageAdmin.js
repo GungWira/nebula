@@ -5,7 +5,7 @@ import axios from 'axios'
 import { useNavigate } from 'react-router-dom';
 import { useCookies } from 'react-cookie'
 // const req = "http://localhost:3001"
-const req = "https://nebula-lounge-api.vercel.app/"
+const req = "https://nebula-lounge-api.vercel.app"
 
 export default function LoginPageAdmin() {
   const reqLink = req+"/admin/login"

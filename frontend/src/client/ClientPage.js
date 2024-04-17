@@ -9,7 +9,7 @@ import Cart from './components/Cart'
 import OrderSuccess from './components/OrderSuccess'
 import axios from 'axios'
 // const req = "http://localhost:3001"
-const req = "https://nebula-lounge-api.vercel.app/"
+const req = "https://nebula-lounge-api.vercel.app"
 
 export default function ClientPage(){
   const reqLink = req+"/client/menu/type"

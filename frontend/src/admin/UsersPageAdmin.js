@@ -5,7 +5,7 @@ import './assets/style.css'
 import Navbar from './components/Navbar'
 import axios from 'axios'
 // const req = "http://localhost:3001"
-const req = "https://nebula-lounge-api.vercel.app/"
+const req = "https://nebula-lounge-api.vercel.app"
 
 export default function UsersPageAdmin(){
   const reqLink = req+"admin/users"

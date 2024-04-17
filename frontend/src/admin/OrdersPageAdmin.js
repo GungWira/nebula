@@ -6,7 +6,7 @@ import ItemOrderList from './components/ItemOrderList'
 import Navbar from './components/Navbar'
 import axios from 'axios'
 // const req = "http://localhost:3001"
-const req = "https://nebula-lounge-api.vercel.app/"
+const req = "https://nebula-lounge-api.vercel.app"
 
 export default function OrdersPageAdmin(){
   const reqLink = req+"/admin/orders"
