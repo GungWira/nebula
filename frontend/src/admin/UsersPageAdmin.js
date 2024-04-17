@@ -8,8 +8,8 @@ import axios from 'axios'
 const req = "https://nebula-lounge-api.vercel.app"
 
 export default function UsersPageAdmin(){
-  const reqLink = req+"admin/users"
-  const reqLinkAdmin = req+"admin/"
+  const reqLink = req+"/admin/users"
+  const reqLinkAdmin = req+"/admin/"
   const [users, setUser] = useState([])
   const [cookie, setCookie] = useCookies(['loggedAdmin'])
   const navigate = useNavigate()
