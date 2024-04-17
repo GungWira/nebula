@@ -8,9 +8,11 @@ import ButtonCart from './components/ButtonCart'
 import Cart from './components/Cart'
 import OrderSuccess from './components/OrderSuccess'
 import axios from 'axios'
-const reqLink = "http://localhost:3001/client/menu/type"
-const reqLinkSpecial = "http://localhost:3001/client/menu/special"
-const reqLinkNormalMenu = "http://localhost:3001/client/menu/detail"
+const req = "http://localhost:3001"
+// const req = "http://localhost:3001"
+const reqLink = req+"/client/menu/type"
+const reqLinkSpecial =  req+"/client/menu/special"
+const reqLinkNormalMenu =  req+"/client/menu/detail"
 
 export default function ClientPage(){
   const [cookies, setCookies] = useCookies(['name'])
@@ -71,6 +73,7 @@ export default function ClientPage(){
   // MENUS
   useEffect(() =>{
     async function fetchData() {
+      console.log(reqLinkNormalMenu)
       const allMenus = await axios.get(reqLinkNormalMenu)
       setAllMenus(allMenus.data.data)
       const menuHeaders = await axios.get(reqLink)
@@ -98,10 +101,10 @@ export default function ClientPage(){
   return(
     <main>
       <LoadingPage/>
-      <LoginPage onLogin={handleLogin}/>
-      <MenuPage name={cookies.name} handleOrder={handleOrder} default={cardMenuDefault} allMenus={allMenus} headers={menusHeaders} specialMenus={specialMenus}/>
-      <ButtonCart items={items} onClick={cartOpen}/>
-      <Cart trigger={cartTrigger} name={cookies.name} count={items} cartClose={cartClose} cartItems={cart} resetCart={resetCart}/>
+      <LoginPage onLogin={handleLogin} req={req}/>
+      <MenuPage name={cookies.name} handleOrder={handleOrder} default={cardMenuDefault} allMenus={allMenus} headers={menusHeaders} specialMenus={specialMenus} req={req}/>
+      <ButtonCart items={items} onClick={cartOpen} req={req}/>
+      <Cart trigger={cartTrigger} name={cookies.name} count={items} cartClose={cartClose} cartItems={cart} resetCart={resetCart} req={req}/>
       <OrderSuccess/>
     </main>
   )

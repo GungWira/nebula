@@ -2,9 +2,9 @@ import {useParams} from "react-router-dom"
 import GlassSVG from '../assets/svgs/white_glass.svg'
 import { useEffect } from "react"
 import axios from "axios"
-const reqLink = "http://localhost:3001/client/order"
 
 export default function Cart(props){
+  const reqLink = props.req+"/client/order"
   useEffect(()=>{
     if(props.trigger){
       document.querySelector(".cartPage").style.transform = "translateY(0%)"

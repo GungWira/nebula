@@ -3,9 +3,9 @@ import GlassSVG from '../assets/svgs/white_glass.svg'
 import {useParams} from "react-router-dom"
 import { useState, useEffect} from 'react'
 import axios from 'axios'
-const reqLink = "http://localhost:3001/client/login/"
 
-export default function LoginPage({onLogin}){
+export default function LoginPage(props){
+  const reqLink =  props.req+"/client/login/"
   const urlTableId = useParams()
   const [nameValue, setNameValue] = useState("")
   const [phoneValue, setPhoneValue] = useState("")
@@ -55,7 +55,7 @@ export default function LoginPage({onLogin}){
              document.querySelector(".message").style.transform = "translateY(300%)" 
           }, 4000);
         }else{
-          onLogin(nameValue)
+          props.onLogin(nameValue)
           document.querySelector(".login_screen").style.transform = "translateY(-100%)"
           document.querySelector(".menuPage").style.transform = "translateY(0%)" 
           document.querySelector(".message").style.display = "none"
