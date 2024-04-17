@@ -19,7 +19,7 @@ app.use(morgan("dev"))
 app.use(router)
 
 app.get("/", (req, res)=>{
-  res.render("homepage")
+  res.send("halo")
 })
 
 app.listen(port, ()=>{
