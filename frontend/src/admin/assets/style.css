@@ -465,6 +465,19 @@ nav .nav_link p:hover{
   justify-content: center;
   align-items: center;
 }
+.boxMenuAdmin .headers .boxDetails,
+.boxMenuAdmin .itemMenuAdmin .boxDetails{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+.boxMenuAdmin .headers .boxActions,
+.boxMenuAdmin .itemMenuAdmin .boxActions{
+  display: flex;
+  flex: 1;
+}
 .boxMenuAdmin .headers p,
 .boxMenuAdmin .itemMenuAdmin p{
   display: flex;
@@ -479,7 +492,6 @@ nav .nav_link p:hover{
 .boxMenuAdmin .headers .boxActions,
 .boxMenuAdmin .itemMenuAdmin .boxActions{
   display: flex;
-  flex: 8;
   font-size: 12px;
   font-family: ManropeR;
   justify-content: center;
@@ -623,5 +635,28 @@ nav .nav_link p:hover{
 .boxEditMenu .contentAreaEdit .buttonArea button.saveBtn {
   color: #40916C;
   border: 1px solid #40916C;
+}
+
+@media screen and (max-width:572px) {
+  .boxMenuAdmin .itemMenuAdmin{
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    gap: 12px;
+  }
+  .boxMenuAdmin .itemMenuAdmin .boxDetails,
+  .boxMenuAdmin .itemMenuAdmin .boxActions{
+    width: 100%;
+  }
+  .boxMenuAdmin .headers .boxActions{
+    display: none;
+  }
+  nav .nav_link{
+    gap: 24px;
+  }
+  nav .logo img{
+    height: 36px;
+  }
 }
 /* menus page */

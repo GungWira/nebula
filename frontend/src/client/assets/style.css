@@ -41,6 +41,9 @@ body{
 main{
   max-width: 632px;
   width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
 }
 p.title{
   font-family: ManropeEB;
@@ -105,9 +108,9 @@ button.main-button p.reguler{
   height: 100vh;
   position: fixed;
   top: 0;
-  left: 0;
   z-index: 3;
   background-color: #F8F8FA;
+  max-width: 632px;
   transition: all 1s cubic-bezier(0.81, 0.23, 0.42, 0.65);
 }
 .loading_screen .container{
@@ -130,6 +133,7 @@ button.main-button p.reguler{
   color: #1C592B;
   letter-spacing: 2px;
   font-size: 8px;
+  margin-bottom: 2px;
 }
 .loading_screen .container .box_logo .box_subtitle{
   display: flex;
@@ -156,8 +160,8 @@ button.main-button p.reguler{
   padding: 40px 0;
   position: fixed;
   transform: translateY(100%);
-  left: 0;
   z-index: 2;
+  max-width: 632px;
   background-color: #F8F8FA;
   transition: all 1s cubic-bezier(0.81, 0.23, 0.42, 0.65);
 }
@@ -412,8 +416,8 @@ p.subtitle{
 button.cartButton{
   position: fixed;
   bottom: 40px;
+  max-width: 584px;
   width: calc(100% - 48px);
-  left: 24px;
   transition: all 0.6s ease-in;
   transform: translateY(200%);
   opacity: 0;
@@ -448,12 +452,12 @@ button.cartButton{
   width: 100%;
   background-color: transparent;
   bottom: 0;
-  left: 0;
   filter: drop-shadow(0px -4px 16px #18181825);
   align-items: center;
   transition: 1s ease;
   transform: translateY(130%);
   max-width: unset;
+  max-width: 632px;
 }
 .cartPage .transCover{
   width: 100%;

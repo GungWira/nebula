@@ -111,18 +111,22 @@ export default function MenusPageAdmin(){
         </div>
         <div className='boxMenuAdmin'>
           <div className='headers'>
-            <p className='reguler id'>ID</p>
-            <p className='reguler'>Name</p>
-            <p className='reguler'>Variant</p>
-            <p className='reguler'>Price</p>
+            <div className='boxDetails'>
+              <p className='reguler id'>ID</p>
+              <p className='reguler'>Name</p>
+              <p className='reguler'>Variant</p>
+              <p className='reguler'>Price</p>
+            </div>
             <div className='boxActions'>Actions</div>
           </div>
           {menus.map((menu) => (
             <div className='itemMenuAdmin' key={menu.id}>
-              <p className='reguler id'>{menu.id}</p>
-              <p className='reguler'>{menu.name}</p>
-              <p className='reguler'>{menu.variant}</p>
-              <p className='reguler'>IDR {menu.price}K</p>
+              <div className='boxDetails'>
+                <p className='reguler id'>{menu.id}</p>
+                <p className='reguler'>{menu.name}</p>
+                <p className='reguler'>{menu.variant}</p>
+                <p className='reguler'>IDR {menu.price}K</p>
+              </div>
               <div className='boxActions'>
                 <button className='edit' type='button' onClick={() =>{editMenu(menu.id, menu.name, menu.variant, menu.price)}}>Edit Menus</button>
                 {menu.specialType === 0 ?
