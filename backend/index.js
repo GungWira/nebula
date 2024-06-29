@@ -13,7 +13,8 @@ const port = 3001
 app.use(cors(
   {
     origin : [
-      process.env.ALLOWED_UI_LINK
+      // process.env.ALLOWED_UI_LINK
+      "https://nebula-lounge-client.vercel.app/"
     ],
     methods: ["POST", "GET"],
     credentials: true
