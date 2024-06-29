@@ -1,4 +1,3 @@
-import plus from '../assets/svgs/plus.svg'
 export default function SpecialMenu(detailMenu){
   return(
     <div className='special-offer-card'>
@@ -9,7 +8,7 @@ export default function SpecialMenu(detailMenu){
       <p className="priceMenu reguler">IDR {detailMenu.price}K</p>
       <button type="button">
         <p className="medium">Add</p>
-        <img src={plus} alt="plus"/>
+        <img src="/svgs/plus.svg" alt="plus"/>
       </button>
     </div>
   )

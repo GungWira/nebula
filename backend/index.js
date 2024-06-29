@@ -3,6 +3,7 @@ const morgan = require('morgan')
 const router = require('./routers')
 const path = require('path')
 const favicon = require('serve-favicon')
+const dotenv = require('dotenv').config()
 const bodyParser = require('body-parser')
 const cookieParser = require("cookie-parser")
 const cors = require('cors')
@@ -11,7 +12,9 @@ const port = 3001
 
 app.use(cors(
   {
-    origin : ["https://nebula-lounge-client.vercel.app"],
+    origin : [
+      process.env.ALLOWED_UI_LINK
+    ],
     methods: ["POST", "GET"],
     credentials: true
   }

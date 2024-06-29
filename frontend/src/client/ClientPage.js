@@ -2,14 +2,14 @@ import LoadingPage from './components/LoadingPage'
 import LoginPage from './components/LoginPage'
 import MenuPage from './components/MenuPage'
 import { useCookies } from 'react-cookie'
-import './assets/style.css'
+import './css/style.css'
 import { useState, useEffect } from 'react'
 import ButtonCart from './components/ButtonCart'
 import Cart from './components/Cart'
 import OrderSuccess from './components/OrderSuccess'
 import axios from 'axios'
-// const req = "http://localhost:3001"
-const req = "https://nebula-lounge-api.vercel.app"
+const req = "http://localhost:3001"
+// const req = "https://nebula-lounge-api.vercel.app"
 
 export default function ClientPage(){
   const reqLink = req+"/client/menu/type"
@@ -73,7 +73,6 @@ export default function ClientPage(){
   // MENUS
   useEffect(() =>{
     async function fetchData() {
-      console.log(reqLinkNormalMenu)
       const allMenus = await axios.get(reqLinkNormalMenu)
       setAllMenus(allMenus.data.data)
       const menuHeaders = await axios.get(reqLink)

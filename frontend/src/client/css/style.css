@@ -1,19 +1,19 @@
 /* font */
 @font-face {
   font-family: "ManropeEB";
-  src: url(./fonts/Manrope/Manrope-ExtraBold.ttf);
+  src: url(../../../public/fonts/Manrope/Manrope-ExtraBold.ttf);
 }
 @font-face {
   font-family: "ManropeB";
-  src: url(./fonts/Manrope/Manrope-Bold.ttf);
+  src: url(../../../public/fonts/Manrope/Manrope-Bold.ttf);
 }
 @font-face {
   font-family: "ManropeR";
-  src: url(./fonts/Manrope/Manrope-Regular.ttf);
+  src: url(../../../public/fonts/Manrope/Manrope-Regular.ttf);
 }
 @font-face {
   font-family: "ManropeM";
-  src: url(./fonts/Manrope/Manrope-Medium.ttf);
+  src: url(../../../public/fonts/Manrope/Manrope-Medium.ttf);
 }
 /* font */
 /* setup */

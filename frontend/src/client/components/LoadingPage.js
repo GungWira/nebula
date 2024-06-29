@@ -1,11 +1,9 @@
-import logo from '../assets/svgs/logo_nebula.svg'
-
 export default function LoadingPage(){
   return(
       <section className="loading_screen">
         <div className="container">
           <div className="box_logo">
-            <img src={logo} alt="" className="logo"/>
+            <img src="/svgs/logo_nebula.svg" alt="" className="logo"/>
             <p className="title title_logo">nebula</p>
             <div className="subtitle box_subtitle">
               <p className="subtitle subtitle_logo">LOUNGE</p>

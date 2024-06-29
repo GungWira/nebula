@@ -1,0 +1,662 @@
+/* font */
+@font-face {
+  font-family: "ManropeEB";
+  src: url(./fonts/Manrope/Manrope-ExtraBold.ttf);
+}
+@font-face {
+  font-family: "ManropeB";
+  src: url(./fonts/Manrope/Manrope-Bold.ttf);
+}
+@font-face {
+  font-family: "ManropeR";
+  src: url(./fonts/Manrope/Manrope-Regular.ttf);
+}
+@font-face {
+  font-family: "ManropeM";
+  src: url(./fonts/Manrope/Manrope-Medium.ttf);
+}
+/* font */
+/* setup */
+#root{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  text-decoration: none;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  background-color: #F8F8FA;
+}
+section{
+  max-width: 1112px;
+  width: 100%;
+}
+p.title{
+  font-family: ManropeEB;
+  font-size: 24px;
+}
+p.subtitle{
+  font-family: ManropeB;
+  font-size: 12px;
+}
+p.reguler{
+  font-size: 12px;
+  font-family: ManropeR;
+}
+p.medium{
+  font-size: 12px;
+  font-family: ManropeM;
+}
+p.bold{
+  font-size: 12px;
+  font-family: ManropeB;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  padding: 0 32px;
+  width: 100%;
+  height: 100%;
+}
+/* setup */
+/* nav */
+.adminPage{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 16px 0;
+  border-bottom: 1px solid #1818182d;
+  background-color: #F8F8FA;
+  filter: drop-shadow(0px -4px 16px #18181813);
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+nav .container{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content:  space-between;
+  max-width: 1112px;
+}
+nav .logo img{
+  height: 48px;
+}
+nav .nav_link{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 64px;
+  color: #181818;
+}
+nav .nav_link p{
+  opacity: .5;
+  transition: 0.5s ease;
+  color: #181818;
+}
+nav .nav_link p a{
+  color: #181818;
+}
+nav .nav_link p:hover{
+  opacity: .9;
+  border-bottom: 1px solid #1818182d;
+  padding-bottom: 2px;
+}
+.adminPage .content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  gap: 8px;
+}
+.adminPage .content img{
+  height: 108px;
+}
+.adminPage .content p.bold{
+  font-size: 18px;
+  margin-top: 8px;
+}
+/* nav */
+/* order page */
+.orderPage{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  padding-top: 102px;
+}
+.orderPage .containerPage{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.titleAdmin{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 16px;
+}
+.titleAdmin .cover{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.titleAdmin p.bold{
+  font-size: 16px;
+}
+.titleAdmin .line{
+  width: 85%;
+  height: 1.5px;
+  background-color: #1818182d;
+}
+.titleAdmin button{
+  padding: 10px 24px;
+  background-color: transparent;
+  border: 1px solid #181818;
+  border-radius: 4px;
+  color: #181818;
+  cursor: pointer;
+}
+.orderPage .containerPage .boxOrderList{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 16px;
+}
+.itemOrderList{
+  display: flex;
+  flex-direction: row;
+  /* min-width: 512px; */
+  width: calc(100% / 2 - 16px);
+  border-bottom: 1px solid #1818182d;
+  padding: 16px 0;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.itemOrderList .pasifOrderList{
+  display: flex;
+  flex-direction: row;
+  flex: 2;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.itemOrderList .pasifOrderList .customerDetail{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 4px;
+  flex: 1;
+}
+.itemOrderList .pasifOrderList .customerDetail p.bold{
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+.itemOrderList .pasifOrderList .orderDetail{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 4px;
+}
+.itemOrderList .activeOrderList{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 4px;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+.itemOrderList .activeOrderList .coverDoubleButton{
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.itemOrderList .activeOrderList button{
+  padding: 12px 0;
+  border-radius: 4px;
+  font-family: ManropeB;
+  font-size: 12px;
+  background-color: transparent;
+}
+.itemOrderList .activeOrderList .pay{
+  border: 1px solid #40916C;
+  color: #40916C;
+}
+.itemOrderList .activeOrderList .cancle{
+  border: 1px solid #F14B4B;
+  color: #F14B4B;
+}
+
+.itemOrderList .activeOrderList .complete{
+  border: 1px solid #FFBE5B;
+  color: #FFBE5B;
+}
+
+@media screen and (max-width : 756px) {
+  .itemOrderList{
+    flex-direction: column;
+    gap: 12px;
+  }
+  .itemOrderList .pasifOrderList,
+  .itemOrderList .activeOrderList{
+    width: 100%;
+  }
+  .itemOrderList .activeOrderList .coverDoubleButton{
+    flex-direction: row;
+  }
+  .itemOrderList .activeOrderList .coverDoubleButton button{
+    width: calc(100% / 2);
+  }
+}
+@media screen and (max-width : 564px){
+  .itemOrderList{
+    width: 100%;
+  }
+}
+/* order page */
+/* admin page */
+.adminPage .boxUsersList{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 8px;
+  width: 100%;
+}
+.adminPage .boxUsersList .header{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  border-bottom: 1px solid #c0c0c0;
+  padding-bottom: 8px;
+}
+.adminPage .boxUsersList .header p{
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  flex: 2.5;
+  justify-content: center;
+  align-items: center;
+}
+.adminPage .boxUsersList .userList{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  border-bottom: 1px solid #c0c0c0;
+  padding-bottom: 8px;
+}
+.adminPage .boxUsersList .userList p{
+  display: flex;
+  flex: 2.5;
+  justify-content: center;
+  align-items: center;
+}
+.adminPage .boxUsersList .userList .action,
+.adminPage .boxUsersList .header .action{
+  display: flex;
+  flex: 3;
+  flex-direction: row;
+  gap: 8px;
+}
+.adminPage .boxUsersList .userList .id,
+.adminPage .boxUsersList .header .id {
+  flex: 0.5;
+}
+.adminPage .boxUsersList .userList .action button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  background-color: transparent;
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.7s ease;
+}
+.adminPage .boxUsersList .userList .action button.copyBtn{
+  border: 1px solid #40916C;
+  color: #40916C;
+}
+.adminPage .boxUsersList .userList .action button.copyBtn:hover{
+  background-color: #40916d38;
+}
+.adminPage .boxUsersList .userList .action button.deleteBtn{
+  border: 1px solid #F14B4B;
+  color: #F14B4B;
+}
+.adminPage .boxUsersList .userList .action button.deleteBtn:hover{
+  background-color: #f14b4b49;
+}
+/* admin page */
+/* login */
+.loginPage{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 24px;
+}
+.loginPage .loginBox{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 48px 64px;
+  background-color: #F8F8FA;
+  border-radius: 4px;
+  gap: 8px;
+  filter: drop-shadow(0px -4px 16px #18181813);
+  width: 100%;
+  max-width: 562px;
+}
+.loginPage .loginBox .titleLogin{
+  font-size: 20px;
+  color: #181818;
+  opacity: .9;
+  margin-bottom: 8px;
+}
+.loginPage .loginBox .subTitle{
+  text-align: center;
+}
+.loginPage .loginBox form{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  gap: 8px;
+  margin: 16px;
+}
+.loginPage .loginBox form input{
+  width: 100%;
+  padding: 12px 24px;
+  padding-left: 48px;
+  border-radius: 4px;
+  background-color: #1a572921;
+  outline: none;
+}
+.loginPage .loginBox form input.username{
+  background-image: url(./svgs/admin.svg);
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: 12px;
+}
+.loginPage .loginBox form input.password {
+  background-image: url(./svgs/password.svg);
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: 12px;
+  margin-bottom: 16px;
+}
+.loginPage .loginBox form button{
+  width: 100%;
+  padding: 12px;
+  background-color: #1C592B;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.loginPage .loginBox form button p{
+  color: white;
+  font-size: 12px;
+}
+@media screen and (max-width:564px) {
+  .loginPage .loginBox{
+    padding: 32px;
+  }
+}
+/* login */
+/* menus page */
+.menusPage{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  padding-top: 102px;
+}
+.boxMenuAdmin{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}
+.boxMenuAdmin .headers,
+.boxMenuAdmin .itemMenuAdmin{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 16px 0;
+  border-bottom: 1px solid #1818182d;
+  justify-content: center;
+  align-items: center;
+}
+.boxMenuAdmin .headers .boxDetails,
+.boxMenuAdmin .itemMenuAdmin .boxDetails{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+.boxMenuAdmin .headers .boxActions,
+.boxMenuAdmin .itemMenuAdmin .boxActions{
+  display: flex;
+  flex: 1;
+}
+.boxMenuAdmin .headers p,
+.boxMenuAdmin .itemMenuAdmin p{
+  display: flex;
+  flex: 3;
+  justify-content: center;
+  text-align: center;
+}
+.boxMenuAdmin .headers p.id,
+.boxMenuAdmin .itemMenuAdmin p.id{
+  flex: 1;
+}
+.boxMenuAdmin .headers .boxActions,
+.boxMenuAdmin .itemMenuAdmin .boxActions{
+  display: flex;
+  font-size: 12px;
+  font-family: ManropeR;
+  justify-content: center;
+  gap: 8px;
+}
+.boxMenuAdmin .itemMenuAdmin .boxActions button{
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 8px;
+  border-radius: 4px;
+  background-color: transparent;
+}
+.boxMenuAdmin .itemMenuAdmin .boxActions button.edit{
+  border: 1px solid #40916C;
+  color: #40916C;
+}
+.boxMenuAdmin .itemMenuAdmin .boxActions button.promo {
+  border: 1px solid #FFBE5B;
+  color: #FFBE5B;
+  background-color: transparent;
+}
+.boxMenuAdmin .itemMenuAdmin .boxActions button.promo.alpha {
+  border: 1px solid #FFBE5B;
+  color: #fff;
+  background-color: #FFBE5B;
+}
+.boxMenuAdmin .itemMenuAdmin .boxActions button.unactive {
+  border: 1px solid #F14B4B;
+  color: #F14B4B;
+  background-color: transparent;
+}
+.boxMenuAdmin .itemMenuAdmin .boxActions button.unactive.alpha {
+  border: 1px solid #F14B4B;
+  background-color: #F14B4B;
+  color: #fff;
+}
+.boxEditMenu{
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  transition: all 1s ease;
+  transform: translateY(100%);
+}
+.boxEditMenu .contentAreaEdit{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 32px 24px;
+  border-radius: 8px;
+  background-color: white;
+  height: fit-content;
+  width: calc(100% - 64px);
+}
+.boxEditMenu .contentAreaEdit p.titleEdit{
+  font-size: 16px;
+}
+.boxEditMenu .contentAreaEdit .coverBoxEdit{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 12px;
+  width: 100%;
+  padding: 24px 0;
+}
+.boxEditMenu .contentAreaEdit .coverBoxEdit .pasifArea{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 16px;
+  flex-wrap: nowrap;
+  flex: 1;
+  white-space: nowrap;
+}
+.boxEditMenu .contentAreaEdit .coverBoxEdit .pasifArea label{
+  font-family: manropeR;
+  font-size: 12px;
+  color: #181818b9;
+  padding: 8px 0;
+}
+.boxEditMenu .contentAreaEdit .coverBoxEdit .colon{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 16px;
+  flex-wrap: nowrap;
+}
+.boxEditMenu .contentAreaEdit .coverBoxEdit .colon p{
+  padding: 8px 0;
+}
+.boxEditMenu .contentAreaEdit .coverBoxEdit .inputArea{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 16px;
+  flex-wrap: nowrap;
+  flex: 3;
+}
+.boxEditMenu .contentAreaEdit .coverBoxEdit .inputArea input{
+  width: 100%;
+  background-color: #F8F8FA;
+  padding: 8px 12px;
+  outline: none;
+  color: #181818c9;
+  font-family: manropeR;
+
+}
+.boxEditMenu .contentAreaEdit .buttonArea{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 100%;
+  gap: 12px;
+}
+.boxEditMenu .contentAreaEdit .buttonArea button{
+  padding: 10px 24px;
+  font-family: manropeR;
+  font-size: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: transparent;
+}
+.boxEditMenu .contentAreaEdit .buttonArea button.cancelBtn{
+  color: #F14B4B;
+  border: 1px solid #F14B4B;
+}
+.boxEditMenu .contentAreaEdit .buttonArea button.saveBtn {
+  color: #40916C;
+  border: 1px solid #40916C;
+}
+
+@media screen and (max-width:572px) {
+  .boxMenuAdmin .itemMenuAdmin{
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    gap: 12px;
+  }
+  .boxMenuAdmin .itemMenuAdmin .boxDetails,
+  .boxMenuAdmin .itemMenuAdmin .boxActions{
+    width: 100%;
+  }
+  .boxMenuAdmin .headers .boxActions{
+    display: none;
+  }
+  nav .nav_link{
+    gap: 24px;
+  }
+  nav .logo img{
+    height: 36px;
+  }
+}
+/* menus page */

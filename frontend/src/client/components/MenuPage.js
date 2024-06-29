@@ -1,5 +1,4 @@
 import TextTheme from './TextTheme'
-import OfferImg from '../assets/imgs/special_offer.png'
 import {useParams} from "react-router-dom"
 import NormalMenu from './NormalMenu'
 import { useEffect, useState } from 'react'
@@ -28,7 +27,7 @@ export default function MenuPage(props){
           <p className="table-id bold">Table {urlTableId.tableId}</p>
         </div>
         <div className='offer'>
-          <img src={OfferImg} alt="nebula_offer"/>
+          <img src="/imgs/special_offer.png" alt="nebula_offer"/>
         </div>
         {/* Special Offer */}
         {specialSection === 1 ? <SpecialMenuBox data={specialMenu}/> : <div></div>}

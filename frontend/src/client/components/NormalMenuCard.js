@@ -1,6 +1,4 @@
 import { useState, useEffect } from "react"
-import plus from '../assets/svgs/plusCounter.svg'
-import minus from '../assets/svgs/minusCounter.svg'
 
 export default function NormalMenuCard(props){
   const [firstAdd, setFirstAdd] = useState(false)
@@ -43,11 +41,11 @@ export default function NormalMenuCard(props){
           {firstAdd ? 
           <div className="counterMenu">
             <button className="counterMin" onClick={() => {removeFromCart(props.id)}}>
-              <img src={minus} alt="min"/>
+              <img src="/svgs/minusCounter.svg" alt="min"/>
             </button>
             <p className="countValue reguler">{count}</p>
             <button className="counterAdd" onClick={() => {addToCart(props.menu)}}>
-              <img src={plus} alt="plus"/>
+              <img src="/svgs/plusCounter.svg" alt="plus"/>
             </button>
           </div>
           : 

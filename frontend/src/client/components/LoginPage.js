@@ -1,5 +1,4 @@
 import TextTheme from './TextTheme'
-import GlassSVG from '../assets/svgs/white_glass.svg'
 import {useParams} from "react-router-dom"
 import { useState, useEffect} from 'react'
 import axios from 'axios'
@@ -46,7 +45,6 @@ export default function LoginPage(props){
           name: nameValue,
           phone: phoneValue
         })
-        console.log(login.data.status)
         if(login.data.status === 400){
           document.querySelector(".message").style.transform = "translateY(0%)" 
           setNameValue("")
@@ -82,7 +80,7 @@ export default function LoginPage(props){
               <p className="reguler">Order for table {urlTableId.tableId} </p>
             </div>
             <div className="order-side">
-              <img src={GlassSVG} alt=""/>
+              <img src="/svgs/white_glass.svg" alt=""/>
             </div>
           </button>
         </form>

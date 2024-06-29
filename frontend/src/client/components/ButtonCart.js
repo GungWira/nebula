@@ -1,5 +1,4 @@
 import { useEffect } from 'react'
-import GlassSVG from '../assets/svgs/white_glass.svg'
 import {useParams} from "react-router-dom"
 
 
@@ -25,7 +24,7 @@ export default function ButtonCart(props){
         <p className="reguler">Order for table {urlTableId.tableId}</p>
       </div>
       <div className="order-side">
-        <img src={GlassSVG} alt=""/>
+        <img src="/svgs/white_glass.svg" alt=""/>
       </div>
     </button>
   )

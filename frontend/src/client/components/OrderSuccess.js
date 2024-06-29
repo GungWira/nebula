@@ -1,8 +1,4 @@
 import {useParams} from "react-router-dom"
-import GlassSVG from '../assets/svgs/white_glass.svg'
-import BlackBar from '../assets/svgs/black_bar.svg'
-
-
 
 export default function OrderSuccess(){
   const tableId =  useParams()
@@ -14,7 +10,7 @@ export default function OrderSuccess(){
   return(
     <section className="order_success">
       <div className="container">
-        <img src={BlackBar} alt=""/>
+        <img src="/svgs/black_bar.svg" alt=""/>
         <p className="bold">Order Success</p>
         <p className="reguler">Please kindly await your order as we prepare it</p>
       </div> 
@@ -24,7 +20,7 @@ export default function OrderSuccess(){
             <p className="reguler">Order for table {tableId.tableId}</p>
           </div>
           <div className="order-side">
-            <img src={GlassSVG} alt=""/>
+            <img src="/svgs/white_glass.svg" alt=""/>
           </div>
         </button>
     </section>

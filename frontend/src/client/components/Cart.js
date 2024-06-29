@@ -1,5 +1,4 @@
 import {useParams} from "react-router-dom"
-import GlassSVG from '../assets/svgs/white_glass.svg'
 import { useEffect } from "react"
 import axios from "axios"
 
@@ -81,7 +80,7 @@ export default function Cart(props){
                 <p className="medium">Confirm the order</p>
               </div>
               <div className="order-side">
-                <img src={GlassSVG} alt=""/>
+                <img src="/svgs/white_glass.svg" alt=""/>
               </div>
             </button>
           </div>
