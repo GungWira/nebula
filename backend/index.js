@@ -14,10 +14,11 @@ app.use(cors(
   {
     origin : [
       // process.env.ALLOWED_UI_LINK
-      "https://nebula-lounge-client.vercel.app/"
+      "https://nebula-lounge-client.vercel.app"
     ],
     methods: ["POST", "GET"],
-    credentials: true
+    credentials: true,
+    optionsSuccessStatus : 200
   }
 ))
 app.use(cookieParser())
